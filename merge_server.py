@@ -1,12 +1,11 @@
 import re
 import zmq
-import os
 
 context = zmq.Context()
-PORT = 5556                  # New port so it doesn't collide with your old server
+PORT = 5556                  
 SEPARATOR = b'\x21'          # '!' ASCII
 
-# File name validation regex (same as original)
+# File name validation regex
 PATTERN = re.compile(r"^[\w\-()\[\]\.\ ]*[\w\-()\[\]]$")
 
 
